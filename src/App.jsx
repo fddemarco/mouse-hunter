@@ -4,10 +4,8 @@ function App () {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   useEffect(() => {
-    console.log(`State: ${enabled}`)
     const handleMove = (event) => {
       const { clientX, clientY } = event
-      console.log('handleMove', { clientX, clientY })
       setPosition({ x: clientX, y: clientY })
     }
     if (enabled) {
